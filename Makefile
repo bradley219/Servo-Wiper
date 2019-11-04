@@ -3,7 +3,7 @@ TARGET = led_timer
 
 # MCU name
 MCU = attiny85
-F_CPU = 32768
+F_CPU = 8000000
 PORT = /dev/tty.usbserial-A907OGFE
 LOGFILE = $(TARGET).log
 BAUD_RATE = 115200
@@ -106,7 +106,7 @@ LDFLAGS = -Wl,-Map=obj/$(TARGET).map,--cref
 # Type: avrdude -c ?
 # to get a full listing.
 #
-AVRDUDE_PROGRAMMER = avrispmkII
+AVRDUDE_PROGRAMMER = atmelice_isp
 
 
 AVRDUDE_PORT = usb # programmer connected to serial device
